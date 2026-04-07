@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.Python
+.env
+.venv/
+venv/
+
+.streamlit/secrets.toml
+
+# Large local training assets
+Code and Data/Input/
+Code and Data/*.h5
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
