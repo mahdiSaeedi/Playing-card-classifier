@@ -19,8 +19,8 @@ IMAGE_SIZE = 128
 class SimpleCardClassifier(nn.Module):
     def __init__(self, num_classes: int = 53) -> None:
         super().__init__()
-        base_model = timm.create_model("efficientnet_b0", pretrained=False)
-        self.features = nn.Sequential(*list(base_model.children())[:-1])
+        self.base_model = timm.create_model("efficientnet_b0", pretrained=False)
+        self.features = nn.Sequential(*list(self.base_model.children())[:-1])
         self.classifier = nn.Sequential(
             nn.Flatten(),
             nn.Linear(1280, num_classes),
@@ -82,4 +82,3 @@ def predict_image(
         )
 
     return results
-
