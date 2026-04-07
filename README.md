@@ -10,7 +10,7 @@ This project contains a trained PyTorch playing card classifier and a Streamlit 
 - `Code and Data/Output/card_classifier.pth`: trained model weights
 - `Code and Data/playing-cards-model-training.ipynb`: training notebook
 
-The raw training dataset is intentionally excluded from GitHub using `.gitignore` so the repo stays small and deployable.
+The raw training dataset is excluded from GitHub so the repo stays small and deployable.
 
 ## Run locally
 
